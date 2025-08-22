@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import styles from "./contact.module.css";
 
 interface FormData {
@@ -82,7 +81,7 @@ export default function Contact() {
         <div className={styles.header}>
           <h2 className={styles.title}>Get In Touch</h2>
           <p className={styles.subtitle}>
-            Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have a project in mind? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
           </p>
         </div>
 

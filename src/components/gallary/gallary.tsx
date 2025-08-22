@@ -184,7 +184,7 @@ export default function Gallery() {
 
         <div className={styles.callToAction}>
           <h3>Ready to Start Your Project?</h3>
-          <p>Let's discuss your requirements and create something amazing together</p>
+          <p>Let&apos;s discuss your requirements and create something amazing together</p>
           <div className={styles.ctaButtons}>
             <button className={styles.primaryButton}>
               Get Free Consultation
