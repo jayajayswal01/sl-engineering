@@ -1,0 +1,276 @@
+.servicesSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.servicesSection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #006bb0, #ff5700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.serviceCard {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #006bb0;
+}
+
+.serviceCard.active {
+  border-color: #ff5700;
+}
+
+.serviceIcon {
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(45deg, rgba(0, 107, 176, 0.1), rgba(255, 87, 0, 0.1));
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover .serviceIcon {
+  transform: scale(1.1) rotate(10deg);
+  background: linear-gradient(45deg, rgba(0, 107, 176, 0.2), rgba(255, 87, 0, 0.2));
+}
+
+.serviceContent {
+  padding: 2rem;
+}
+
+.serviceContent h3 {
+  font-size: 1.5rem;
+  color: #006bb0;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.serviceCard:hover .serviceContent h3 {
+  color: #ff5700;
+}
+
+.serviceContent p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.featuresList li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.featureIcon {
+  color: #ff5700;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.featuresList li.activeFeature {
+  color: #006bb0;
+  transform: translateX(10px);
+}
+
+.featuresList li.activeFeature .featureIcon {
+  transform: scale(1.2);
+}
+
+.serviceImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.serviceImage {
+  transition: transform 0.5s ease;
+}
+
+.serviceCard:hover .serviceImage {
+  transform: scale(1.1);
+}
+
+.learnMoreBtn {
+  background: none;
+  border: none;
+  color: #006bb0;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.learnMoreBtn:hover {
+  color: #ff5700;
+  gap: 1rem;
+}
+
+.btnIcon {
+  transition: transform 0.3s ease;
+}
+
+.learnMoreBtn:hover .btnIcon {
+  transform: translateX(5px);
+}
+
+.callToAction {
+  background: linear-gradient(45deg, #006bb0, #ff5700);
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  margin-top: 4rem;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaContent h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ctaContent p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  background: white;
+  color: #006bb0;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: #ff5700;
+}
+
+.ctaButton:hover .btnIcon {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .callToAction {
+    padding: 3rem 1.5rem;
+  }
+
+  .ctaContent h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .serviceContent h3 {
+    font-size: 1.3rem;
+  }
+
+  .serviceImageWrapper {
+    height: 150px;
+  }
+}

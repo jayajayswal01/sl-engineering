@@ -52,6 +52,9 @@
 .highlight {
   background: linear-gradient(45deg, #006bb0, #ff5700);
   -webkit-background-clip: text;
+  background-clip: text;
+  background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   display: inline-block;
