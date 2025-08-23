@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
-
+import Image from "next/image";
+import Logo from "../../assets/logo.png"
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +21,12 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.logo}>
-          SL ENGINEERINGS
+        <Image
+            src={Logo}
+            alt="SL Engineerings"
+            width={90}
+            height={50}
+          />
         </Link>
 
         <button

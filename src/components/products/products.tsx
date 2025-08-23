@@ -3,6 +3,11 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./products.module.css";
+import proImage1 from "../../assets/products/pro1.jpg";
+import proImage2 from "../../assets/products/pro2.webp";
+import proImage3 from "../../assets/products/pro3.jpg";
+
+import type { StaticImageData } from "next/image";
 
 interface Product {
   id: number;
@@ -14,7 +19,7 @@ interface Product {
     label: string;
     value: string;
   }[];
-  image: string;
+  image: StaticImageData;
 }
 
 const products: Product[] = [
@@ -35,7 +40,7 @@ const products: Product[] = [
       { label: "Compressive Strength", value: ">40 N/mm²" },
       { label: "Shape", value: "Circular/Square" }
     ],
-    image: "/cover-blocks.jpg"
+    image: proImage1
   },
   {
     id: 2,
@@ -54,7 +59,7 @@ const products: Product[] = [
       { label: "Design Options", value: "Multiple" },
       { label: "Finish", value: "Smooth/Textured" }
     ],
-    image: "/boundary-walls.jpg"
+    image: proImage2
   },
   {
     id: 3,
@@ -73,7 +78,7 @@ const products: Product[] = [
       { label: "Patterns", value: "15+ Options" },
       { label: "Durability", value: "10+ Years" }
     ],
-    image: "/wall-panels.jpg"
+    image: proImage3
   }
 ];
 

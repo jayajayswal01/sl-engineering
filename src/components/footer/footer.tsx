@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './footer.module.css';
+import Logo from '../../assets/logo.png';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -49,8 +50,12 @@ export default function Footer() {
           <div className={styles.grid}>
             <div className={styles.companyInfo}>
               <div className={styles.logo}>
-                <h2>SL ENGINEERINGS</h2>
-                <span className={styles.tagline}>Excellence in Construction</span>
+                <Image
+                  src={Logo}
+                  alt="SL Engineerings"
+                  width={150}
+                  height={120}
+                />
               </div>
               <p className={styles.description}>
                 Leading manufacturer of premium quality cover blocks and innovative boundary wall solutions. 

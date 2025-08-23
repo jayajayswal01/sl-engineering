@@ -3,6 +3,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./services.module.css";
+import servImage1 from "../../assets/services/serv1.jpg";
+import servImage2 from "../../assets/services/serv2.jpg";
+import servImage3 from "../../assets/services/serv3.jpg";
+import servImage4 from "../../assets/services/serv4.jpg";
+import servImage5 from "../../assets/services/serv5.jpg";
+import servImage6 from "../../assets/services/serv6.jpg";
+
+import type { StaticImageData } from "next/image";
 
 interface ServiceType {
   id: number;
@@ -10,7 +18,7 @@ interface ServiceType {
   description: string;
   features: string[];
   icon: string;
-  image: string;
+  image: string | StaticImageData;
 }
 
 const services: ServiceType[] = [
@@ -25,7 +33,7 @@ const services: ServiceType[] = [
       "Long-lasting appeal"
     ],
     icon: "🏗️",
-    image: "/decorative-covering.jpg"
+    image: servImage1
   },
   {
     id: 2,
@@ -38,7 +46,7 @@ const services: ServiceType[] = [
       "Quality finish"
     ],
     icon: "💧",
-    image: "/waterproofing.jpg"
+    image: servImage2
   },
   {
     id: 3,
@@ -51,7 +59,7 @@ const services: ServiceType[] = [
       "Professional installation"
     ],
     icon: "🏢",
-    image: "/retaining-wall.jpg"
+    image: servImage3
   },
   {
     id: 4,
@@ -61,23 +69,25 @@ const services: ServiceType[] = [
       "Multiple design options",
       "Security features",
       "Durable construction",
+      "Customizable heights",
       "Customizable heights"
     ],
     icon: "🏰",
-    image: "/boundary-wall.jpg"
+    image: servImage4
   },
   {
     id: 5,
     title: "Modern Fence Walls with Cement Pillars",
-    description: "Contemporary fence designs with robust cement pillars for enhanced security and modern appeal.",
+    description: "Contemporary fence designs with robust cement pillars for enhanced security.",
     features: [
       "Contemporary designs",
       "Reinforced pillars",
       "Integrated lighting options",
-      "Low maintenance"
+      "Low maintenance",
+      "Variety of finishes"
     ],
     icon: "🏛️",
-    image: "/modern-fence.jpg"
+    image: servImage5
   },
   {
     id: 6,
@@ -87,10 +97,11 @@ const services: ServiceType[] = [
       "Quick installation",
       "Perfect alignment",
       "Cost-effective",
-      "Strength & durability"
+      "Strength & durability",
+      "Eco-friendly materials"
     ],
     icon: "🧱",
-    image: "/interlocking-wall.jpg"
+    image: servImage6
   }
 ];
 

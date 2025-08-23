@@ -3,13 +3,21 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./gallary.module.css";
+import gallImage1 from "../../assets/gallary/gall1.jpg";
+import gallImage2 from "../../assets/gallary/gall2.avif";
+import gallImage3 from "../../assets/gallary/gall3.jpg";
+import gallImage4 from "../../assets/gallary/gall4.png";
+import gallImage5 from "../../assets/gallary/gall5.jpg";
+import gallImage6 from "../../assets/gallary/gall6.jpg"; 
+
+import type { StaticImageData } from "next/image";
 
 interface GalleryItem {
   id: number;
   title: string;
   category: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   location: string;
   completionYear: string;
 }
@@ -20,7 +28,7 @@ const galleryData: GalleryItem[] = [
     title: "Modern Boundary Wall",
     category: "Boundary Walls",
     description: "Contemporary boundary wall design with premium finish",
-    image: "/gallery/boundary-wall-1.jpg",
+    image: gallImage1,
     location: "Mumbai, Maharashtra",
     completionYear: "2024"
   },
@@ -29,7 +37,7 @@ const galleryData: GalleryItem[] = [
     title: "Industrial Cover Blocks",
     category: "Cover Blocks",
     description: "High-strength cover blocks for industrial construction",
-    image: "/gallery/cover-blocks-1.jpg",
+    image: gallImage2,
     location: "Pune, Maharashtra",
     completionYear: "2025"
   },
@@ -38,7 +46,7 @@ const galleryData: GalleryItem[] = [
     title: "Residential Compound Wall",
     category: "Boundary Walls",
     description: "Elegant compound wall with decorative elements",
-    image: "/gallery/compound-wall-1.jpg",
+    image: gallImage3,
     location: "Bangalore, Karnataka",
     completionYear: "2024"
   },
@@ -47,7 +55,7 @@ const galleryData: GalleryItem[] = [
     title: "Premium Cover Block Solution",
     category: "Cover Blocks",
     description: "Precision-engineered cover blocks for perfect spacing",
-    image: "/gallery/cover-blocks-2.jpg",
+    image: gallImage4,
     location: "Delhi, NCR",
     completionYear: "2025"
   },
@@ -56,7 +64,7 @@ const galleryData: GalleryItem[] = [
     title: "Commercial Complex Wall",
     category: "Boundary Walls",
     description: "High-security boundary wall for commercial complex",
-    image: "/gallery/commercial-wall.jpg",
+    image: gallImage5,
     location: "Hyderabad, Telangana",
     completionYear: "2024"
   },
@@ -65,7 +73,7 @@ const galleryData: GalleryItem[] = [
     title: "Specialized Cover Blocks",
     category: "Cover Blocks",
     description: "Custom cover blocks for special applications",
-    image: "/gallery/cover-blocks-3.jpg",
+    image: gallImage6,
     location: "Chennai, Tamil Nadu",
     completionYear: "2025"
   }
